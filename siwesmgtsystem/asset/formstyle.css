@@ -1,0 +1,48 @@
+/* Full-width input fields */
+h2
+{
+	text-align: center;
+}
+input[type=text],
+input[type=password] {
+    width: 40%;
+	height:40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+
+button {
+    padding: 14px 20px;
+    margin: 0px;
+    border: none;
+    cursor: pointer;
+    display:block;
+	width:200px;
+	float: center;
+}
+fieldset
+{
+	padding:auto;
+	margin:15px;
+	text-decoration:bold;
+}
+ol, ul {
+  list-style: none;
+}
+
+legend
+{
+	font-size: 18px;
+	font-weight: 350px;
+	font-style: stress;
+}
+label
+{
+	font-size: 14px;
+	font-weight: 200px;
+}

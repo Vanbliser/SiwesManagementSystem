@@ -1,0 +1,73 @@
+
+  <?php
+
+  session_start();
+
+  //stage1 form
+  //Declearing a variable and assigning the form field_name to it
+  //And the isset($_POST['']) alerts the php of the field entering
+
+  if (isset($_POST["submit"]))
+  {
+        $firstname = $_POST['firstname'];
+        $lastname = $_POST['lastname'];
+        $regno = $_POST['regno'];
+        $dept = $_POST['dept'];
+        $phone = $_POST['phone'];
+        $school = $_POST['school'];
+        $location = $_POST['location'];
+		$company = $_POST['company'];
+		$supervisorname = $_POST['supervisorname'];
+        $address = $_POST['address'];
+        
+        $sql = ("INSERT INTO registeredstudent (firstname,lastname,regno,dept,phone,school,location,company,supervisorname,address) 
+        VALUES ('$firstname', '$lastname', '$regno', '$dept','$phone','$school','$location','$company','$supervisorname','$address')");
+
+        require "../connect.php";
+
+        $db = $conn->prepare($sql);
+        $db->execute();
+
+        if ($db->execute()) {
+            header('location: ../portal.html');
+        }
+
+        /*if (!empty($full_name) && !empty($email))
+        {
+            $to = 'chimaprosperukoma@gmail.com';
+            $subject = 'stage1 form received';
+            $message = '$full_name. "\n" .$reg_number "\n" .$ppt_file';
+            $headers = '$email';*/
+
+            // if (strlen('contact_name')>10) {
+            //     echo 'max text is 10';
+            // }
+
+            // if (@mail($to, $subject, $message, $headers))
+            // {
+                    // $_SESSION['error'] = 'Thanks for contacting us.';
+            // }
+            // else
+            // {
+                    // $_SESSION['error'] = 'Sorry an error occured';
+            // }
+            /*
+            else 
+            {
+                    $_SESSION['error'] = 'All fields required';
+            }*/
+}
+
+        
+
+        //Connection to database 
+        // $db = new mysqli('localhost', 'root','','databoard');
+
+        //die();
+
+
+        //inserting a file into the database
+       
+//$_SESSION ['prosper'] = "Your file has been successfully uploaded";
+
+
